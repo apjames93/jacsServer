@@ -6,8 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var api = require('./api/index');
+<<<<<<< HEAD
 var auth = require('./auth/index');
 
+=======
+>>>>>>> routes
 
 var app = express();
 
@@ -51,7 +54,12 @@ app.use(function(err, req, res, next) {
      res.json( {
       message: err.message,
      error: {}
+<<<<<<< HEAD
    });
+=======
+});
+});
+>>>>>>> routes
 });
 
 
