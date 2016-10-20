@@ -6,30 +6,36 @@ var helpers =  require('../auth/helpers');
 
 
 
-router.get('/', function(req, res, next){
-
-});
-
-router.get('/', function(req, res, next){
-
-
-});
+  router.get('/', function(req, res, next){
+    queries.getData()
+    .then(function(data){
+      res.json({test: 'data'});
+      });
+    });
 
 router.get('/:id', function(req, res, next){
-
+  queries.getData()
+  .then(function(data){
+    res.json({test: 'data'});
+  });
 });
 
-router.delete('/',helpers.ensureauthenticated,  function(req, res, next){
 
-});
 
-router.post('/',helpers.ensureauthenticated, function(req, res,next){
 
-});
 
-router.put('/',helpers.ensureauthenticated, function(req, res,next){
 
-});
-
+// router.delete('/',helpers.ensureauthenticated,  function(req, res, next){
+//
+// });
+//
+// router.post('/',helpers.ensureauthenticated, function(req, res,next){
+//
+// });
+//
+// router.put('/',helpers.ensureauthenticated, function(req, res,next){
+//
+// });
+//
 
 module.exports = router;
