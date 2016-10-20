@@ -24,7 +24,6 @@ module.exports ={
   },
 
   editData : function(data){
-    console.log(data);
     return knex('work')
     .update({
       description: data.description,

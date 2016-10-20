@@ -42,26 +42,11 @@ router.delete('/:id',  function(req, res, next){
 });
 
 router.put('/',  function(req, res, next){
-  console.log(req.query);
   queries.editData(req.query)
   .then(function(data){
     res.json({data : data});
   });
 });
 
-
-
-// router.delete('/',helpers.ensureauthenticated,  function(req, res, next){
-//
-// });
-//
-// router.post('/',helpers.ensureauthenticated, function(req, res,next){
-//
-// });
-//
-// router.put('/',helpers.ensureauthenticated, function(req, res,next){
-//
-// });
-//
 
 module.exports = router;
